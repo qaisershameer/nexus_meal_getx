@@ -1,7 +1,7 @@
 name: todo_getx
-description: "A new Flutter Todo App Project using GetX State Management."
+description: "A new Flutter Meal App Project using GetX State Management."
 
-publish_to: 'none' 
+publish_to: 'www.qrdpro.com/app/nexus/meals'
 
 version: 1.0.0+1
 
@@ -25,3 +25,7 @@ dev_dependencies:
 flutter:
 
   uses-material-design: true
+
+  assets:
+    - assets/
+    - assets/images/

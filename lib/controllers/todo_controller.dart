@@ -1,5 +1,6 @@
 import 'package:get/get.dart';
 import 'package:flutter/material.dart';
+
 import '../custom_widgets/u_button_icon.dart';
 
 class ToDoController extends GetxController {
@@ -27,6 +28,7 @@ class ToDoController extends GetxController {
                 /// Title
                 TextFormField(
                   controller: _title,
+                  style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                       hintText: 'Enter Task Title', border: OutlineInputBorder()),
                   validator: (value) {
@@ -45,6 +47,7 @@ class ToDoController extends GetxController {
                 /// Description
                 TextFormField(
                   controller: _description,
+                  style: TextStyle(color: Colors.white),
                   decoration: InputDecoration(
                       hintText: 'Enter Task Description',
                       border: OutlineInputBorder()),
@@ -69,7 +72,7 @@ class ToDoController extends GetxController {
                     }
                   },
                   buttonText: 'Save Task Data',
-                  buttonIcon: Icon(Icons.save),
+                  buttonIcon: Icon(Icons.save, color: Colors.white,),
                 ),
               ],
             ),
@@ -88,6 +91,7 @@ class ToDoController extends GetxController {
     // Show dialog for editing
     Get.defaultDialog(
       title: "Edit Task",
+      titleStyle: TextStyle(color: Colors.white),
       content: Form(
         key: _formKey,
         child: Column(
@@ -96,6 +100,7 @@ class ToDoController extends GetxController {
             /// Task Title Edit
             TextFormField(
               controller: _title,
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 labelText: "Title",
                 border: OutlineInputBorder(),
@@ -116,6 +121,7 @@ class ToDoController extends GetxController {
             /// Description Edit
             TextFormField(
               controller: _description,
+              style: TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 labelText: "Description",
                 border: OutlineInputBorder(),
@@ -186,8 +192,10 @@ class ToDoController extends GetxController {
     Get.defaultDialog(
       title: "Delete Confirmation",
       middleText: "Are you sure you want to delete this item?",
-      textConfirm: "Yes",
+      middleTextStyle: TextStyle(color: Colors.white),
+      titleStyle: TextStyle(color: Colors.white),
       textCancel: "No",
+      textConfirm: "Yes",
       confirmTextColor: Colors.white,
       buttonColor: Colors.red,
       onConfirm: () {

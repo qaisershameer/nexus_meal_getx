@@ -18,7 +18,7 @@ class UButtonIcon extends StatelessWidget {
     return OutlinedButton.icon(
       icon: buttonIcon,
       style: OutlinedButton.styleFrom(
-        foregroundColor: Colors.black,
+        foregroundColor: Colors.white,
       ),
       label: Text(
         buttonText,
