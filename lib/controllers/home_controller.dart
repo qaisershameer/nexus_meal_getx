@@ -91,7 +91,7 @@ class HomeScreenController extends GetxController {
         'Cut the tomatoes and the onion into small pieces.',
         'Boil some water - add salt to it once it boils.',
         'Put the spaghetti into the boiling water - they should be done in about 10 to 12 minutes.',
-        'In the meantime, heaten up some olive oil and add the cut onion.',
+        'In the meantime, heated up some olive oil and add the cut onion.',
         'After 2 minutes, add the tomato pieces, salt, pepper and your other spices.',
         'The sauce will be done once the spaghetti are.',
         'Feel free to add some cheese on top of the finished dish.'
@@ -153,7 +153,7 @@ class HomeScreenController extends GetxController {
         'Form 2 patties',
         'Fry the patties for c. 4 minutes on each side',
         'Quickly fry the buns for c. 1 minute on each side',
-        'Bruch buns with ketchup',
+        'Brunch buns with ketchup',
         'Serve burger with tomato, cucumber and onion'
       ],
       isGlutenFree: false,
@@ -189,7 +189,7 @@ class HomeScreenController extends GetxController {
         'Heat the butter and oil in a large pan (allow the fat to get very hot) and fry the schnitzels until golden brown on both sides.',
         'Make sure to toss the pan regularly so that the schnitzels are surrounded by oil and the crumbing becomes ‘fluffy’.',
         'Remove, and drain on kitchen paper. Fry the parsley in the remaining oil and drain.',
-        'Place the schnitzels on awarmed plate and serve garnishedwith parsley and slices of lemon.'
+        'Place the schnitzels on a warmed plate and serve garnished with parsley and slices of lemon.'
       ],
       isGlutenFree: false,
       isVegan: false,
@@ -223,7 +223,7 @@ class HomeScreenController extends GetxController {
       steps: [
         'Wash and cut salad and herbs',
         'Dice the salmon',
-        'Process mustard, vinegar and olive oil into a dessing',
+        'Process mustard, vinegar and olive oil into a dressing',
         'Prepare the salad',
         'Add salmon cubes and dressing'
       ],

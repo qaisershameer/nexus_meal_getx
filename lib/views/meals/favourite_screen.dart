@@ -6,7 +6,13 @@ class FavouriteScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Center(child: Text('This is Favourite Meals Screen\n*****\n****\n***\n**\n*', textAlign: TextAlign.center, style: TextStyle(color: Colors.white),),),
+      body: Center(
+        child: Text(
+          'This is Favourite Meals Screen\n*****\n****\n***\n**\n*',
+          textAlign: TextAlign.center,
+          style: TextStyle(fontSize: 24, color: Colors.white),
+        ),
+      ),
     );
   }
 }
