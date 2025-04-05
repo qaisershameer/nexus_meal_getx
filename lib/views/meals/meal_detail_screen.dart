@@ -17,10 +17,12 @@ class MealDetailScreen extends StatelessWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
+
             /// Hero Animation
             Hero(
               tag: meal.id,
-              /// NetWork Image with FadeInImage
+
+              /// FadeInImage with NetWork Image
               child: FadeInImage(
                   placeholder: MemoryImage(kTransparentImage),
                   image: NetworkImage(meal.imageUrl),
@@ -30,14 +32,11 @@ class MealDetailScreen extends StatelessWidget {
             ),
 
             /// Ingredients
-            MealHeading(title: 'Ingredients'),
+            MealTitle(title: 'Ingredients'),
             MealSubTitle(subtitle: meal.ingredients),
 
-            /// Gap
-            const SizedBox(height: 16),
-
             /// Steps
-            MealHeading(title: 'Steps'),
+            MealTitle(title: 'Steps'),
             MealSubTitle(subtitle: meal.steps),
           ],
         ),

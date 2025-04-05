@@ -8,7 +8,7 @@ class FavouriteScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Text(
-          'This is Favourite Meals Screen\n*****\n****\n***\n**\n*',
+          'This is My Favourite Meals Screen\n*****\n****\n***\n**\n*',
           textAlign: TextAlign.center,
           style: TextStyle(fontSize: 48, color: Colors.white),
         ),

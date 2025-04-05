@@ -10,10 +10,10 @@ class MealItemRow extends StatelessWidget {
       children: [
 
         /// Icon
-        Icon(icon, size: 17, color: Colors.white),
+        Icon(icon, size: 16, color: Colors.white),
 
         /// Gap
-        SizedBox(width: 6),
+        SizedBox(width: 8),
 
         /// Label
         Text(label, style: TextStyle(color: Colors.white))

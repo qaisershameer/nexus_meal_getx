@@ -8,13 +8,16 @@ class MealSubTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(16.0),
+      padding: const EdgeInsets.all(8.0),
       child: Column(
         children: subtitle
             .map((item) => Text(
           item,
+
+          textAlign: TextAlign.center,
           style: Theme.of(context).textTheme.bodyMedium!.copyWith(
             color: Theme.of(context).colorScheme.onSurface,
+            height: 1.5
           ),
         ))
             .toList(),

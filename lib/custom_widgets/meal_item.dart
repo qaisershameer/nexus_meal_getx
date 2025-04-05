@@ -64,6 +64,7 @@ class MealItem extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
+
                         /// Duration
                         MealItemRow(
                             icon: Icons.schedule,
@@ -74,7 +75,7 @@ class MealItem extends StatelessWidget {
 
                         /// Complexity
                         MealItemRow(
-                            icon: Icons.work,
+                            icon: Icons.ac_unit,
                             label: meal.complexity.name.toString()),
 
                         /// Gap

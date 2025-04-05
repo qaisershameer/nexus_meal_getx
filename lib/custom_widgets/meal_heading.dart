@@ -1,15 +1,18 @@
 import 'package:flutter/material.dart';
-class MealHeading extends StatelessWidget {
-  const MealHeading({super.key, required this.title});
+class MealTitle extends StatelessWidget {
+  const MealTitle({super.key, required this.title});
 
   final String title;
 
   @override
   Widget build(BuildContext context) {
-    return Text(title,
-        style: Theme.of(context)
-            .textTheme
-            .headlineMedium!
-            .copyWith(color: Theme.of(context).colorScheme.onSurface));
+    return Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: Text(title,
+          style: Theme.of(context)
+              .textTheme
+              .headlineMedium!
+              .copyWith(color: Theme.of(context).colorScheme.onSurface)),
+    );
   }
 }
