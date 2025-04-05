@@ -10,7 +10,7 @@ class FavouriteScreen extends StatelessWidget {
         child: Text(
           'This is Favourite Meals Screen\n*****\n****\n***\n**\n*',
           textAlign: TextAlign.center,
-          style: TextStyle(fontSize: 24, color: Colors.white),
+          style: TextStyle(fontSize: 48, color: Colors.white),
         ),
       ),
     );

@@ -20,23 +20,18 @@ class MealsScreen extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .headlineLarge!
-                  .copyWith(color: Theme.of(context).colorScheme.onSurface)
-          ),
-
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface)),
           /// Gap
           const SizedBox(height: 16),
-
           /// Body Content Message if nothing Found in Meals List
           Text('Try Selecting a different Category',
               style: Theme.of(context)
                   .textTheme
                   .bodyLarge!
-                  .copyWith(color: Theme.of(context).colorScheme.onSurface)
-          ),
+                  .copyWith(color: Theme.of(context).colorScheme.onSurface)),
         ],
       ),
     );
-
     /// Headline if meals list is not empty then display category wise meals with all its details
     if (meals.isNotEmpty) {
       content = ListView.builder(
@@ -51,12 +46,10 @@ class MealsScreen extends StatelessWidget {
             );
           });
     }
-
     /// if meal title is null then return above define content widget
     if (title == null) {
       return content;
     }
-
     /// AppBar & Content in Scaffold
     return Scaffold(
       appBar: AppBar(title: Text(title!)),

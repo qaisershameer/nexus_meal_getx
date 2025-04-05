@@ -75,7 +75,7 @@ class MealItem extends StatelessWidget {
                         /// Complexity
                         MealItemRow(
                             icon: Icons.work,
-                            label: meal.complexity.name.toString().toUpperCase()),
+                            label: meal.complexity.name.toString()),
 
                         /// Gap
                         SizedBox(width: 12.0),
@@ -83,7 +83,7 @@ class MealItem extends StatelessWidget {
                         /// Affordability
                         MealItemRow(
                             icon: Icons.attach_money,
-                            label: meal.affordability.name.toString().toUpperCase())
+                            label: meal.affordability.name.toString())
                       ],
                     )
                   ],

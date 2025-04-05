@@ -7,22 +7,22 @@ import '../../models/meals_model.dart';
 
 class CategoriesScreen extends StatefulWidget {
   const CategoriesScreen({super.key, required this.availableMeals});
+
   final RxList<Meal> availableMeals;
 
   @override
   State<CategoriesScreen> createState() => _CategoriesScreenState();
 }
 
-class _CategoriesScreenState extends State<CategoriesScreen>
-    with SingleTickerProviderStateMixin {
+class _CategoriesScreenState extends State<CategoriesScreen> with SingleTickerProviderStateMixin {
+
   final controller = Get.find<HomeScreenController>();
   late AnimationController _animationController;
 
   @override
   void initState() {
     super.initState();
-    _animationController =
-        AnimationController(vsync: this, duration: Duration(milliseconds: 300));
+    _animationController = AnimationController(vsync: this, duration: Duration(milliseconds: 300));
     _animationController.forward();
   }
 
@@ -53,9 +53,12 @@ class _CategoriesScreenState extends State<CategoriesScreen>
             CategoryGridItem(
               category: category,
               onSelectCategory: () {
-                final filteredMeals = controller.availableMeals.where((meal) => meal.categories.contains(category.id)).toList();
+                print('Category tapped!');
+                final filteredMeals = controller.availableMeals
+                    .where((meal) => meal.categories.contains(category.id)).toList();
+
                 /// Navigate to Meal Screen with these above Selected Category Wise filter Meals
-                Get.to(()=> MealsScreen(meals: filteredMeals));
+                Get.to(() => MealsScreen(meals: filteredMeals));
               },
             ),
         ],
@@ -68,7 +71,7 @@ class _CategoriesScreenState extends State<CategoriesScreen>
           end: Offset(0, 0),
         ).animate(CurvedAnimation(
             parent: _animationController, curve: Curves.easeInOut)),
-        child: child,
+        child: child
       ),
     );
   }

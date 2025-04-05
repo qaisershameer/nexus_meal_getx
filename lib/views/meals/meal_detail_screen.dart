@@ -1,24 +1,44 @@
 import 'package:flutter/material.dart';
 import 'package:todo_getx/models/meals_model.dart';
+import 'package:transparent_image/transparent_image.dart';
+import '../../custom_widgets/meal_heading.dart';
+import '../../custom_widgets/meal_sub_title.dart';
 
 class MealDetailScreen extends StatelessWidget {
   const MealDetailScreen({super.key, required this.meal});
   final Meal meal;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         title: Text(meal.title),
-        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.star))],
+        actions: [IconButton(onPressed: () {}, icon: Icon(Icons.star_border))],
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
+            /// Hero Animation
             Hero(
-                tag: meal.id,
-                child: Image.network(meal.imageUrl,
-                    height: 300, width: double.infinity, fit: BoxFit.cover))
+              tag: meal.id,
+              /// NetWork Image with FadeInImage
+              child: FadeInImage(
+                  placeholder: MemoryImage(kTransparentImage),
+                  image: NetworkImage(meal.imageUrl),
+                  fit: BoxFit.cover,
+                  height: 300,
+                  width: double.infinity),
+            ),
+
+            /// Ingredients
+            MealHeading(title: 'Ingredients'),
+            MealSubTitle(subtitle: meal.ingredients),
+
+            /// Gap
+            const SizedBox(height: 16),
+
+            /// Steps
+            MealHeading(title: 'Steps'),
+            MealSubTitle(subtitle: meal.steps),
           ],
         ),
       ),
