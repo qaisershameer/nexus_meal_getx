@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 
 class MealSubTitle extends StatelessWidget {
-  const MealSubTitle({super.key, required this.subtitle});
+  const MealSubTitle(
+      {super.key,
+      required this.subtitle,
+      this.horizontal = 2.0,
+      this.vertical = 2.0});
 
   final List<String> subtitle; // Change subtitle to List<String>
+  final double horizontal;
+  final double vertical;
 
   @override
   Widget build(BuildContext context) {
@@ -11,16 +17,19 @@ class MealSubTitle extends StatelessWidget {
       padding: const EdgeInsets.all(8.0),
       child: Column(
         children: subtitle
-            .map((item) => Text(
-          item,
+            .map(
+              (content) => Padding(
+                /// Padding
+                padding: EdgeInsets.symmetric(horizontal: horizontal, vertical: vertical),
 
-          textAlign: TextAlign.center,
-          style: Theme.of(context).textTheme.bodyMedium!.copyWith(
-            color: Theme.of(context).colorScheme.onSurface,
-            height: 1.5
-          ),
-        ))
-            .toList(),
+                /// Content || Description || Details || Sub-Title
+                child: Text(
+                    content,
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context).textTheme.bodyMedium!.copyWith(color: Theme.of(context).colorScheme.onSurface)
+                ),
+              ),
+            ).toList(),
       ),
     );
   }

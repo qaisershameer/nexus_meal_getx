@@ -416,4 +416,21 @@ class HomeScreenController extends GetxController {
       isLactoseFree: true,
     ),
   ].obs;
+
+  /// favourite Meals
+  RxList<Meal> favouriteMeals = <Meal>[].obs;
+
+  RxBool toggleMealFavouriteStatus(Meal meal){
+    final mealIsFavourite = favouriteMeals.contains(meal);
+
+    if(mealIsFavourite){
+      /// Already in Favourite List
+      favouriteMeals.value = favouriteMeals.where((m) => m.id != meal.id).toList();
+      return false.obs;
+    } else {
+      /// Not in Favourite List
+      favouriteMeals.value = [...favouriteMeals, meal];
+      return true.obs;
+    }
+  }
 }
