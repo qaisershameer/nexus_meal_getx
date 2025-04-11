@@ -24,12 +24,9 @@ class ToDoScreen extends StatelessWidget {
             icon: const Icon(
               Icons.home,
               size: 35,
-              color: Colors.white,
-            ),
+              color: Colors.white),
           ),
-          const SizedBox(
-            width: 8,
-          ),
+          const SizedBox(width: 8),
         ],
       ),
       body: Obx(

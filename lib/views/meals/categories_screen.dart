@@ -53,7 +53,7 @@ class _CategoriesScreenState extends State<CategoriesScreen> with SingleTickerPr
             CategoryGridItem(
               category: category,
               onSelectCategory: () {
-                print('Category tapped!');
+                // print('Category tapped!');
                 final filteredMeals = controller.availableMeals
                     .where((meal) => meal.categories.contains(category.id)).toList();
 

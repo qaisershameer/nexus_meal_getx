@@ -424,13 +424,17 @@ class HomeScreenController extends GetxController {
     final mealIsFavourite = favouriteMeals.contains(meal);
 
     if(mealIsFavourite){
+
       /// Already in Favourite List
       favouriteMeals.value = favouriteMeals.where((m) => m.id != meal.id).toList();
       return false.obs;
+
     } else {
+
       /// Not in Favourite List
       favouriteMeals.value = [...favouriteMeals, meal];
       return true.obs;
+
     }
   }
 }

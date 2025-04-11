@@ -7,7 +7,7 @@ class GetXUserController extends GetxController{
   RxString email = ''.obs;
 
 
-/// Functions /// State Logics
+  /// Functions /// State Logics
   void updateProfile(String userName, String userEmail){
 
     /// Update Get X Variables Values

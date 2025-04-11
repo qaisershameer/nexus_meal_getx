@@ -61,8 +61,7 @@ class ToDoController extends GetxController {
 
                 /// Gap
                 SizedBox(
-                  height: 16.0,
-                ),
+                  height: 16.0),
 
                 /// Add Button to Add Data
                 UButtonIcon(
@@ -114,9 +113,7 @@ class ToDoController extends GetxController {
             ),
 
             /// Gap
-            SizedBox(
-              height: 16.0,
-            ),
+            SizedBox(height: 16.0),
 
             /// Description Edit
             TextFormField(
@@ -208,7 +205,6 @@ class ToDoController extends GetxController {
       onCancel: () {}, // Close dialog when "No" is pressed
     );
   }
-
 
   /// function to add SnackBar message
   void showSnackBar(String message) {

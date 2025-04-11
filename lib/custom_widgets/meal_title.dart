@@ -10,6 +10,7 @@ class MealTitle extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Text(
+        /// heading
         title,
         style: Theme.of(context).textTheme.titleLarge!.copyWith(
             color: Theme.of(context).colorScheme.primary,
